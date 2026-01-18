@@ -8,6 +8,17 @@
     <meta name="description"
         content="טיפול מקצועי ומדויק בדיקור סיני, צמחי מרפא ופרחי באך. מרחב שקט ובטוח לריפוי ואיזון הגוף.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/images/logo-small.png">
+    <link rel="apple-touch-icon" href="public/images/logo-small.png">
+
+    <!-- Open Graph Meta Tags (for WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="הדס – מרחב לריפוי ושלווה">
+    <meta property="og:description" content="טיפול מקצועי ומדויק בדיקור סיני, צמחי מרפא ופרחי באך. מרחב שקט ובטוח לריפוי ואיזון הגוף.">
+    <meta property="og:image" content="public/images/logo-small.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+
     <!-- Google Fonts - Heebo for Hebrew -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +87,7 @@
             z-index: 0;
         }
 
-        .section > .container {
+        .section>.container {
             position: relative;
             z-index: 1;
         }
@@ -98,7 +109,7 @@
             z-index: 0;
         }
 
-        .footer > * {
+        .footer>* {
             position: relative;
             z-index: 1;
         }
@@ -139,7 +150,7 @@
         }
 
         .section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
         .section-title {
@@ -160,7 +171,7 @@
         /* ========== Buttons ========== */
         .btn {
             display: inline-block;
-            padding: 16px 40px;
+            padding: 14px 40px;
             font-family: var(--font-family);
             font-size: 1.1rem;
             font-weight: 500;
@@ -194,13 +205,15 @@
         }
 
         .hero .btn-primary {
-            background-color: #25D366;
-            color: white;
+            background-color: var(--color-primary-dark);
+            color: var(--color-text-light);
             margin-top: 1.5rem;
+            box-shadow: 0 4px 15px rgba(107, 143, 122, 0.3);
         }
 
         .hero .btn-primary:hover {
-            background-color: #20ba5a;
+            background-color: #5A7A6A;
+            box-shadow: 0 6px 20px rgba(107, 143, 122, 0.4);
         }
 
         .btn-secondary {
@@ -221,7 +234,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 10px 24px 80px;
+            padding: 10px 24px 60px;
             position: relative;
             overflow: hidden;
         }
@@ -234,7 +247,7 @@
             right: 0;
             bottom: 0;
             /* Soft glow + dot pattern */
-            background-image: 
+            background-image:
                 radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 40%),
                 url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='%23ffffff' fill-opacity='0.25'/%3E%3C/svg%3E");
@@ -249,7 +262,7 @@
 
         .hero-logo {
             max-width: 180px;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto;
         }
 
         .hero h1 {
@@ -373,8 +386,16 @@
 
         .service-card h3 {
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             color: var(--color-text-dark);
+        }
+
+        .service-description {
+            font-size: 0.95rem;
+            color: var(--color-text-body);
+            line-height: 1.7;
+            margin: 0;
+            text-align: right;
         }
 
         .services-note {
@@ -384,6 +405,65 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.9;
+        }
+
+        /* ========== Who Is It For Section ========== */
+        .who-for {
+            background-color: var(--color-bg-light);
+        }
+
+        .who-for-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .who-for-description {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--color-text-body);
+        }
+
+        .who-for-list-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        .who-for-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 40px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .who-for-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            color: var(--color-text-body);
+            line-height: 1.6;
+        }
+
+        .who-for-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 600px) {
+            .who-for-list {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ========== Clinic Section ========== */
@@ -451,7 +531,7 @@
         }
 
         .process-step p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--color-text-body);
             line-height: 1.7;
             margin: 0;
@@ -509,7 +589,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(ellipse at 30% 40%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
                 url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='%23ffffff' fill-opacity='0.2'/%3E%3C/svg%3E");
@@ -569,12 +649,12 @@
         }
 
         .cta-link-whatsapp {
-            background-color: #25D366;
-            border-color: #25D366;
+            background-color: var(--color-primary-dark);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .cta-link-whatsapp:hover {
-            background-color: #20ba5a;
+            background-color: rgba(255, 255, 255, 0.35);
         }
 
         .cta-link-icon {
@@ -598,6 +678,37 @@
             width: 20px;
             height: 20px;
             flex-shrink: 0;
+        }
+
+        .cta-pricing {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: var(--border-radius);
+            padding: 18px 24px;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-pricing-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-pricing-item {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            opacity: 0.9;
+        }
+
+        .cta-pricing-special {
+            font-size: 0.95rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        .cta-note strong{
+            font-size: 1.3rem;
         }
 
         /* ========== Footer ========== */
@@ -710,11 +821,11 @@
             }
 
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .hero-description {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .btn {
@@ -741,11 +852,16 @@
                 טיפול מקצועי ומדויק, המבוסס על אבחון מעמיק והתאמה אישית מלאה.<br>
                 מרחב שקט ובטוח שבו הגוף נרגע, המערכת מתאזנת, ותהליך הריפוי יכול להתחיל.
             </p>
+            <br>
+            <p class="hero-description animate-in delay-3">
+                אשמח לייעץ ולענות על כל שאלה
+            </p>
             <a href="https://wa.me/972528939880" target="_blank" class="btn btn-primary animate-in delay-4">
                 <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                לקביעת טיפול בוואטסאפ
+                שלחו לי הודעה
             </a>
         </div>
     </section>
@@ -788,6 +904,7 @@
                         <span>針</span>
                     </div>
                     <h3>דיקור סיני</h3>
+                    <p class="service-description">הטיפול כולל החדרת מחטים דקות לנקודות מדויקות בגוף במטרה להפחית כאב ולתמוך בתהליכי ויסות טבעיים. במהלך הפגישה אני מלווה את הטיפול ומתאימה אותו לפי הצורך שעולה.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -795,23 +912,24 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2"
                             stroke="currentColor">
                             <!-- Stem -->
-                            <path d="M12 22 Q12 18 12 14" stroke-width="1.2"/>
+                            <path d="M12 22 Q12 18 12 14" stroke-width="1.2" />
                             <!-- Center leaf -->
-                            <path d="M12 14 Q12 8 12 4 Q16 8 12 14" fill="currentColor" fill-opacity="0.1"/>
-                            <path d="M12 14 Q12 8 12 4 Q8 8 12 14" fill="currentColor" fill-opacity="0.1"/>
-                            <path d="M12 4 Q16 8 12 14 Q8 8 12 4"/>
+                            <path d="M12 14 Q12 8 12 4 Q16 8 12 14" fill="currentColor" fill-opacity="0.1" />
+                            <path d="M12 14 Q12 8 12 4 Q8 8 12 14" fill="currentColor" fill-opacity="0.1" />
+                            <path d="M12 4 Q16 8 12 14 Q8 8 12 4" />
                             <!-- Left leaf -->
-                            <path d="M12 16 Q6 14 4 10 Q8 12 12 16" fill="currentColor" fill-opacity="0.1"/>
-                            <path d="M4 10 Q8 12 12 16"/>
+                            <path d="M12 16 Q6 14 4 10 Q8 12 12 16" fill="currentColor" fill-opacity="0.1" />
+                            <path d="M4 10 Q8 12 12 16" />
                             <!-- Right leaf -->
-                            <path d="M12 16 Q18 14 20 10 Q16 12 12 16" fill="currentColor" fill-opacity="0.1"/>
-                            <path d="M20 10 Q16 12 12 16"/>
+                            <path d="M12 16 Q18 14 20 10 Q16 12 12 16" fill="currentColor" fill-opacity="0.1" />
+                            <path d="M20 10 Q16 12 12 16" />
                             <!-- Small accent leaves -->
-                            <path d="M9 18 Q7 17 6 15" stroke-width="1"/>
-                            <path d="M15 18 Q17 17 18 15" stroke-width="1"/>
+                            <path d="M9 18 Q7 17 6 15" stroke-width="1" />
+                            <path d="M15 18 Q17 17 18 15" stroke-width="1" />
                         </svg>
                     </div>
                     <h3>צמחי מרפא</h3>
+                    <p class="service-description">צמחי מרפא ניתנים כתמיכה טבעית לגוף ומסייעים בהקלה על מגוון תסמינים. לאחר האבחון אני בוחרת את הצמחים המתאימים לכל מקרה.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -820,25 +938,46 @@
                             stroke="currentColor">
                             <!-- 5 petals radiating from center, 72 degrees apart -->
                             <!-- Top petal (0°) -->
-                            <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(0 12 6)"/>
+                            <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(0 12 6)" />
                             <!-- Top-right petal (72°) -->
-                            <ellipse cx="17.7" cy="9.5" rx="2.8" ry="5" transform="rotate(72 17.7 9.5)"/>
+                            <ellipse cx="17.7" cy="9.5" rx="2.8" ry="5" transform="rotate(72 17.7 9.5)" />
                             <!-- Bottom-right petal (144°) -->
-                            <ellipse cx="15.5" cy="16.5" rx="2.8" ry="5" transform="rotate(144 15.5 16.5)"/>
+                            <ellipse cx="15.5" cy="16.5" rx="2.8" ry="5" transform="rotate(144 15.5 16.5)" />
                             <!-- Bottom-left petal (216°) -->
-                            <ellipse cx="8.5" cy="16.5" rx="2.8" ry="5" transform="rotate(216 8.5 16.5)"/>
+                            <ellipse cx="8.5" cy="16.5" rx="2.8" ry="5" transform="rotate(216 8.5 16.5)" />
                             <!-- Top-left petal (288°) -->
-                            <ellipse cx="6.3" cy="9.5" rx="2.8" ry="5" transform="rotate(288 6.3 9.5)"/>
+                            <ellipse cx="6.3" cy="9.5" rx="2.8" ry="5" transform="rotate(288 6.3 9.5)" />
                             <!-- Center circle -->
-                            <ellipse cx="12" cy="12" rx="2.8" ry="2.5"/>
+                            <ellipse cx="12" cy="12" rx="2.8" ry="2.5" />
                         </svg>
                     </div>
                     <h3>פרחי באך</h3>
+                    <p class="service-description">הטיפול מבוסס על תמציות פרחים בטיפות התומכות באיזון רגשי ובהפחתת עומס ומתח. את שילוב התמציות אני מרכיבה בהתאם למצב הרגשי שעולה בטיפול.</p>
                 </div>
             </div>
-            <p class="services-note">
-                הטיפול תומך ביכולת הריפוי הטבעית של הגוף ובעצם מזכיר לגוף לחזור לשורש הטבעי והבריא שלו.
-            </p>
+        </div>
+    </section>
+
+    <!-- Who Is It For Section -->
+    <section class="section who-for">
+        <div class="container">
+            <h2 class="section-title">למי מתאים הטיפול?</h2>
+            <div class="who-for-content">
+                <p class="who-for-description">
+                    הטיפול מיועד לכל מי שמחפש דרך טבעית ועדינה לחזור לאיזון פנימי, לחזק את הגוף והנפש, ולטפח תחושת שלווה ובריאות.
+                </p>
+                <p class="who-for-list-title">דוגמאות לתחומי טיפול נפוצים:</p>
+                <ul class="who-for-list">
+                    <li>כאבים כרוניים ומיגרנות</li>
+                    <li>בעיות עיכול (כגון IBS)</li>
+                    <li>חרדה, מתח ובעיות שינה</li>
+                    <li>חוסר איזון הורמונלי וגיל המעבר</li>
+                    <li>עייפות מתמשכת</li>
+                    <li>כאבי שלד ושרירים</li>
+                    <li>תמיכה בתקופה של עומס נפשי ושחיקה</li>
+                    <li>מחלות כרוניות ואקוטיות</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -858,6 +997,7 @@
                         הטיפול מתקיים באווירה רגועה, בקצב מותאם, ועם ליווי אישי לאורך הדרך – כך שניתן להרגיש שיש מי
                         שמקשיב באמת ומוביל את התהליך במקצועיות ובאחריות.
                     </p>
+                    <p>הקליניקה נמצאת בגדרה.</p>
                 </div>
             </div>
         </div>
@@ -904,27 +1044,38 @@
                 <p>
                     אפשר להתחיל בתהליך מקצועי, מדויק וקשוב, שמחזיר בהדרגה תחושת יציבות, חיוניות ושליטה.
                 </p>
-                <p>
-                    <strong>אשמח ללוות אותך בדרך לריפוי.</strong>
+                <div class="cta-pricing">
+                    <p class="cta-pricing-title">מחיר ומשך פגישה</p>
+                    <p class="cta-pricing-item">פגישה טיפולית: 45 דקות | 250 ₪</p>
+                    <p class="cta-pricing-special">✨ פגישה ראשונית (היכרות + אבחון + טיפול) – שעה עד שעה ורבע – 250 ₪</p>
+                </div>
+                <p class="cta-note">
+                    <strong>
+                        אשמח ללוות אותך בדרך לריפוי   
+                    </strong>
                 </p>
                 <div class="cta-links">
                     <a href="tel:+972528939880" class="cta-link">
-                        <svg class="cta-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        <svg class="cta-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                         <span>התקשרו אליי</span>
                     </a>
                     <a href="https://wa.me/972528939880" target="_blank" class="cta-link cta-link-whatsapp">
                         <svg class="cta-link-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                         </svg>
-                        <span>שלחו הודעה בוואטסאפ</span>
+                        <span>לשליחת הודעה או קביעת טיפול </span>
                     </a>
                 </div>
                 <p class="cta-address">
-                    <svg class="cta-address-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
+                    <svg class="cta-address-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
                     </svg>
                     הקליניקה ממוקמת בכניסה לגדרה
                 </p>
